@@ -1,1 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
 
+
+
+
+
+	long long factorialRecursive(int n) {
+	    if (n <= 1)
+	        return 1;
+	    else
+	        return n * factorialRecursive(n - 1);
+	}
+
+
+
+	long long factorialIterative(int n) {
+	    long long result = 1;
+	    int i;
+	    for (i = 1; i <= n; i++) {
+	        result = result * i;
+	    }
+	    return result;
+	}
+
+
+	void showExpansion(int n) {
+	    int i;
+	    printf("%d! = ", n);
+	    for (i = n; i > 1; i--) {
+	        printf("%d * ", i);
+	    }
+	    printf("1");
+	}
+
+		
+		
+		
+		int main() {
+		    int num;
+		
+		    printf("\nEnter a number to calculate its factorial: ");
+		    scanf("%d", &num);
+		
+		    if (num < 0) {
+		        printf("\nFactorial of negative numbers cannot be calculated: ");
+		        return 0;
+		    }
+
+		    printf("\nFactorial using recursion: ");
+		    showExpansion(num);
+		    printf(" = %lld: ", factorialRecursive(num));
+
+
+
+    	return 0;}
