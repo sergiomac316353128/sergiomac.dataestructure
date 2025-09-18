@@ -1,4 +1,4 @@
-/*
+*
 sergio ignacio de la crus rodriguez 
 n.cuenta: 316353128
 
